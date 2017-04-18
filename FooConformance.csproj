@@ -86,7 +86,6 @@
     <Compile Include="FooConformanceForm.Designer.cs">
       <DependentUpon>FooConformanceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GammaConformanceReport.cs" />
     <Compile Include="WaitForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +137,7 @@
   <ItemGroup>
     <Content Include="foo_verification_input_table.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
