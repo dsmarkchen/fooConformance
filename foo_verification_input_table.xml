@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?><TEST_InputTable>
+
+<Signal><Name>test 1</Name><Misc /><Result />
+  <Expression>exec foo_consts;set foo_sn foo_fw foo_period foo_pulseout foo_eeprom;show;get foo_sn;exec check_match "EG" </Expression>
+  <Option>backcolor=AliceBlue</Option>
+</Signal>
+  
+<Signal><Name>test 2</Name><Misc /><Result />
+  <Expression>show;get foo_fw;exec check_match "^3.27.13"</Expression>
+  <Option>backcolor=AliceBlue</Option>
+</Signal>
+  <Signal>
+    <Name>Something  </Name>
+    <Misc />
+    <Result />
+    <Expression>show;get foo_period;exec check_match "6"</Expression>
+    <Option>backcolor=AliceBlue</Option>
+  </Signal>
+
+  <Signal>
+    <Name>Something 2</Name>
+    <Misc />
+    <Result />
+    <Expression>show;get foo_pulseout;exec check_match "^Corrected" </Expression>
+    <Option>backcolor=AliceBlue</Option>
+  </Signal>
+  <Signal>
+    <Name>Something 3</Name>
+    <Misc />
+    <Result />
+    <Expression>show;get foo_eeprom</Expression>
+    <Option>backcolor=AliceBlue</Option>
+  </Signal>
+
+  <Signal>
+    <Name>Foo</Name>
+    <Misc />
+    <Result />
+    <Expression>exec foo_cps;set foo_cps foo_temp;show; get foo_cps;exec check 10 50;</Expression>
+    <Option>backcolor=Beige</Option>
+  </Signal>
+
+  
+  <Signal>
+    <Name>Bar                              </Name>
+    <Misc />
+    <Result />
+    <Expression>show;get foo_temp;exec check 10 40;</Expression>
+    <Option>backcolor=Beige</Option>
+  </Signal>
+  
+
+</TEST_InputTable>
+
