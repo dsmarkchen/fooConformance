@@ -86,6 +86,7 @@
     <Compile Include="FooConformanceForm.Designer.cs">
       <DependentUpon>FooConformanceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogTo.cs" />
     <Compile Include="WaitForm.cs">
       <SubType>Form</SubType>
     </Compile>

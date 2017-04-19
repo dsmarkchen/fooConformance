@@ -26,7 +26,9 @@ namespace FooConformance
         PageState _page_state1 = new PageState();
         PageState _page_state2 = new PageState();
         PageState _page_state3 = new PageState();
-        
+
+        LogTo _log = new LogTo();
+
         public FooConformanceForm()
         {
             InitializeComponent();
@@ -110,14 +112,9 @@ namespace FooConformance
         }
 
         private DataSet _gamma_TestDS = null;
-        String _filename_gamma_test = System.Windows.Forms.Application.StartupPath + "\\gamma_verification_input_table.xml";
+        String _filename_gamma_test = System.Windows.Forms.Application.StartupPath + "\\foo_verification_input_table.xml";
 
-        private DataSet _gamma_ConformDS = null;
-        String _filename_gamma_conform = System.Windows.Forms.Application.StartupPath + "\\gamma_conformation_input_table.xml";
-
-        private DataSet _gamma_CalibDS = null;
-        String _filename_gamma_calib = System.Windows.Forms.Application.StartupPath + "\\gamma_calibration_input_table.xml";
-
+       
         SymbolicProcessor _sym_engine = null;
 
         private void Form1_Load(object sender, EventArgs e)
@@ -143,7 +140,7 @@ namespace FooConformance
                 MessageBoxEX.Show(this, "Error -- " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error );
                 Console.WriteLine(ex.Message);
             }
-
+            _log.GeneralLog("formload", "load ds done", "");
 
             Datagridview_setup( dataGridView1, _gamma_TestDS);
 
